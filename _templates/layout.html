@@ -1,0 +1,15 @@
+{% extends "!layout.html" %}
+
+{% set css_files = css_files + ['_static/site.css'] %}
+{% set script_files = script_files + ['_static/osswitch.js'] %}
+
+{% block document %}
+<div>
+	<select id="os_switch" class="pull-right">
+		<option value="__all__" selected="selected">(All)</option>
+		<option value="macos">macOS</option>
+		<option value="windows">Windows</option>
+	</select>
+</div>
+{{ super() }}
+{% endblock document %}
